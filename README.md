@@ -24,3 +24,9 @@ Run rcup after pulling a new version of the repository to symlink any new files 
 ```
 rcup
 ```
+
+### Vim
+
+Manage vim plugins with [vim-plug](https://github.com/junegunn/vim-plug)
+
+Reload `.vimrc` open Vim and `:PlugInstall` to install plugins.
