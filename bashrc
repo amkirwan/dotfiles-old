@@ -38,3 +38,6 @@ export SCM_CHECK=true
 source $BASH_IT/bash_it.sh
 
 alias git_graph='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
+export BASH_IT_CUSTOM="~/dotfiles/bash_it/custom"
+
