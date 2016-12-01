@@ -30,6 +30,7 @@ inoremap kj <Esc>
 
 "NERDtree map
 ab nt NERDTree
+let g:NERDTreeDirArrows=0
 
 "vim markdown
 let g:vim_markdown_no_default_key_mappings = 1
