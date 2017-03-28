@@ -1,5 +1,5 @@
 .DS_Store
 
 tags
-.swo
-.swp
+*.swo
+*.swp
