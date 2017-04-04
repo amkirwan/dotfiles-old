@@ -5,6 +5,7 @@
 [core]
 	editor = vim
   autocrlf = input
+  excludesfile = ~/.gitignore
 [alias]
   aa = add --all
   ap = add --patch
@@ -18,3 +19,5 @@
   prune = true
 [rebase]
   autosquash = true
+[include]
+  path = ~/.gitconfig.local
