@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o vi
+
 export LANG='en_US.UTF-8'
 
 # Path to the bash it configuration
