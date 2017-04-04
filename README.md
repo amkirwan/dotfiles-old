@@ -9,6 +9,9 @@ clone onto you system
 git clone https://github.com/amkirwan/dotfiles
 ```
 
+Follow the instructions to install Bash-it
+[Install bash-it](https://github.com/Bash-it/bash-it)
+
 Follow the instructions to install RCM on your system
 [Install rcm:](https://github.com/thoughtbot/rcm)
 
