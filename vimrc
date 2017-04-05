@@ -1,6 +1,7 @@
 syntax on
 filetype plugin indent on
 
+runtime macros/matchit.vim
 if filereadable(expand("~/.vimrc.bundles"))
 	source ~/.vimrc.bundles
 endif
