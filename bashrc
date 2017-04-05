@@ -43,9 +43,6 @@ export SHORT_HOSTNAME=$(hostname -s)
 # after enabling or disabling aliases, plugins, and completions.
 # export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
-# Load Bash It
-source ${BASH_IT}/bash_it.sh
-
 alias git_graph='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias hi='history'
 
@@ -58,3 +55,11 @@ export NVM_DIR="${HOME}/.nvm"
 [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# if [ -f "${HOME}/dotfiles-local/bashrc" ]; then
+#   . "${HOME}/dotfiles-local/bashrc"
+# fi 
+
+export BASH_IT_CUSTOM="~/dotfiles/bash_it/custom"
+
+# Load Bash It
+source ${BASH_IT}/bash_it.sh
