@@ -16,7 +16,7 @@ export BASH_IT_THEME='bobby'
 # export BASH_IT_REMOTE='bash-it'
 
 # Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
+# export GIT_HOSTING='git@git.domain.com'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
@@ -29,6 +29,11 @@ export TODO="t"
 
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
+
+# # Set Xterm/screen/Tmux title with only a short hostname.
+# # Uncomment this (or set SHORT_HOSTNAME to something else),
+# # Will otherwise fall back on $HOSTNAME.
+export SHORT_HOSTNAME=$(hostname -s)
 
 # Set vcprompt executable path for scm advance info in prompt (demula theme)
 # https://github.com/djl/vcprompt
@@ -50,3 +55,5 @@ export PATH="${HOME}/.rbenv/bin:${PATH}"
 
 export NVM_DIR="${HOME}/.nvm"
 [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
