@@ -46,10 +46,10 @@ export SHORT_HOSTNAME=$(hostname -s)
 alias git_graph='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias hi='history'
 
+# export PATH="${HOME}/.rbenv/bin:${PATH}:${HOME}/code/gateway/public_bin"
+export PATH="${HOME}/.rbenv/bin:${PATH}:${HOME}/code/gateway/public_bin" 
 # rbenv 
 eval "$(rbenv init -)"
-
-export PATH="${HOME}/.rbenv/bin:${PATH}"
 
 export NVM_DIR="${HOME}/.nvm"
 [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
