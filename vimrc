@@ -75,6 +75,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+map <Leader>p :CtrlP<CR>
 " CTRLP clear cache
 map <Leader>C :CtrlPClearCache<CR>
 
