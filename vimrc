@@ -44,7 +44,6 @@ let g:vim_markdown_no_default_key_mappings = 1
 
 " Set the tag file
 set tags=./tags;
-set grepprg=ack
 
 "Map Leader
 let mapleader=","
