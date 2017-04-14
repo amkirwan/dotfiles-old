@@ -4,13 +4,11 @@ set -o vi
 
 export LANG='en_US.UTF-8'
 
-# Path to the bash it configuration
-export BASH_IT="/${HOME}/.bash_it"
-
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='bobby'
-
+# export BASH_IT_THEME='brainy'
+export CUSTOM_THEME_DIR="${HOME}/dotfiles/bash_it/custom/themes"
+export BASH_IT_THEME="iterate-2" 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
 # export BASH_IT_REMOTE='bash-it'
@@ -59,7 +57,8 @@ export NVM_DIR="${HOME}/.nvm"
 #   . "${HOME}/dotfiles-local/bashrc"
 # fi 
 
-export BASH_IT_CUSTOM="~/dotfiles/bash_it/custom"
+# Path to the bash it configuration
+export BASH_IT="/${HOME}/.bash_it"
 
 # Load Bash It
 source ${BASH_IT}/bash_it.sh
