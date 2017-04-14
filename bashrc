@@ -47,7 +47,7 @@ alias git_graph='git log --graph --full-history --all --color --pretty=format:"%
 alias hi='history'
 
 # export PATH="${HOME}/.rbenv/bin:${PATH}:${HOME}/code/gateway/public_bin"
-export PATH="${HOME}/.rbenv/bin:${PATH}:${HOME}/code/gateway/public_bin" 
+export PATH="${HOME}/.rbenv/bin:${PATH}"
 # rbenv 
 eval "$(rbenv init -)"
 
