@@ -24,6 +24,10 @@ set hlsearch        " highlight searches
 set incsearch       " show search matches as you type
 set nu              " turn line numbers on
 
+" Don't create backup  files
+" leaving commented for now
+" set nobackup
+" set noswapfile
 
 " set t_Co=256        " color
 " colorscheme mono" color theme
@@ -95,7 +99,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-filetype plugin indent on
 autocmd filetype python set expandtab  " Python settings for tabs
 
 augroup vimrcEx
