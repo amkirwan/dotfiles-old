@@ -9,6 +9,9 @@ export LANG='en_US.UTF-8'
 # export BASH_IT_THEME='brainy'
 export CUSTOM_THEME_DIR="${HOME}/dotfiles/bash_it/custom/themes"
 export BASH_IT_THEME="iterate-2" 
+# Path to the bash it configuration
+export BASH_IT="/${HOME}/.bash_it"
+
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
 # export BASH_IT_REMOTE='bash-it'
@@ -53,12 +56,9 @@ export NVM_DIR="${HOME}/.nvm"
 [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# if [ -f "${HOME}/dotfiles-local/bashrc" ]; then
-#   . "${HOME}/dotfiles-local/bashrc"
-# fi 
-
-# Path to the bash it configuration
-export BASH_IT="/${HOME}/.bash_it"
+if [ -f "${HOME}/dotfiles-local/bashrc" ]; then
+  . "${HOME}/dotfiles-local/bashrc"
+fi 
 
 # Load Bash It
 source ${BASH_IT}/bash_it.sh
