@@ -1,4 +1,3 @@
-syntax on
 filetype plugin indent on
 
 runtime macros/matchit.vim
@@ -18,21 +17,33 @@ au BufRead,BufNewFile *.scss set filetype=scss
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set shiftround      " use multiple of shiftwidth when indenting with '<' and '>'
 set expandtab
 
 set hlsearch        " highlight searches
+set incsearch       " show search matches as you type
 set nu              " turn line numbers on
 
-set t_Co=256        " color
-colorscheme desert  " color theme
-set background=dark " adapt colors for bg
+
+" set t_Co=256        " color
+" colorscheme mono" color theme
+" set background=dark " adapt colors for bg
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
+
+" monokai colorscheme
+colorscheme monokai
 
 if has('gui_running')
   set guifont=Inconsolata:h11 "set mvim font
 endif
 
+" Make it obvious where 80 characters is
+" set textwidth=80
+" set colorcolumn=+1
+
 "Map Esc
-":inoremap kj <Esc>
 inoremap kj <Esc>
 
 "NERDtree map
@@ -83,3 +94,24 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+filetype plugin indent on
+autocmd filetype python set expandtab  " Python settings for tabs
+
+augroup vimrcEx
+  autocmd!
+
+  " When editing a file, always jump to the last known cursor position.
+  "   " Don't do it for commit messages, when the position is invalid, or
+  "   when
+  "     " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+augroup END

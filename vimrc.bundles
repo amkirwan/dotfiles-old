@@ -53,6 +53,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'AndrewRadev/ember_tools.vim'
 Plug 'thoughtbot/vim-rspec'
+Plug 'pangloss/vim-javascript'
+" color schemes
+Plug 'sickill/vim-monokai'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
